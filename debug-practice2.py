@@ -125,7 +125,7 @@ class School:
     
     def get_students_with_failed_grades(self, fail_threshold=60):
         failed_students = []
-        for student in self.teachers:
+        for student in self.students:
             for course, grades in student.grades.items():
                 if any(grade < fail_threshold for grade in grades):
                     failed_students.append((student, course))
