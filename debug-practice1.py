@@ -12,7 +12,7 @@ class Student(Person):
         self.student_id = student_id
         self.courses = []
         self.grades = {}
-        self.attendence = {} 
+        self.attendance = {} 
 
     def enroll(self, course):
         if course not in self.courses:
@@ -156,12 +156,12 @@ class School:
 def generate_demo_data(school):
     # Generate Students
     for i in range(1, 51):
-        student = Student(f"Student {i}", random.randint(18, 25), f"S{1000+i}")
+        student = Student(f"Student_{i}", random.randint(18, 25), f"S{1000+i}")
         school.add_student(student)
 
     # Generate Teachers
     for i in range(1, 11):
-        teacher = Teacher(f"Teacher {i}", random.randint(30, 60), f"T{100+i}")
+        teacher = Teacher(f"Teacher_{i}", random.randint(30, 60), f"T{100+i}")
         school.add_teacher(teacher)
 
     # Generate Courses
