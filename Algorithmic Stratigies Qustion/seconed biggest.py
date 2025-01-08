@@ -6,15 +6,15 @@ find the second biggest element in an array
 # 0,1,2,3,4 --> 3
 # 1 --> 1
 # 
-def secondbiggest(array):
-    if not array: 
+def secondbiggest(nums):
+    if not nums: 
         return None
-    max1, max2 = array[0], array[0]
+    max1, max2 = nums[0], nums[0]
 
-    for n in array:
-        if n > max1:
+    for num in nums:
+        if num > max1:
             max2= max1
-            max1 = n 
+            max1 = num 
         
     return max2
 
